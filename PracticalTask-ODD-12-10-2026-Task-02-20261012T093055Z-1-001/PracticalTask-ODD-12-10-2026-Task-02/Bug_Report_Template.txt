@@ -1,0 +1,37 @@
+ITUS102 - PRACTICAL EXAMINATION | DEBUGGING AND IMPLEMENTATION REPORT
+Date: 12-10-2026 | Task 02 - Campus Canteen Order Calculator
+
+Enrollment No.:26CE032
+Name:Vedant Jani
+
+SIMPLE BUGS (write a brief explanation for each)
+Bug | Original problem | Correction made | Why required
+S1  |Navigation link used the incorrect target #calcuator.                  	|Changed it to #calculator.                 					|Ensures navigation scrolls to the correct calculator section.
+S2  |The footer used a generic <div> element.                  			|Replaced <div class="site-footer"> with <footer class="site-footer">.          |Uses the correct semantic HTML5 element for footer information.
+S3  |The background-color declaration was missing a colon.                 	|Corrected it to background-color: #f1f6f9;.                			|Ensures the page background color is applied correctly.
+S4  |The .pageTitle selector did not match the HTML ID pageTitle.               |Changed .pageTitle to #pageTitle.                 				|Ensures the heading styling is applied to the correct element.
+S5  |The subtotal was calculated using addition instead of multiplication.      |Changed unitPrice + quantity to unitPrice * quantity.                 		|Calculates the actual total cost of the ordered items.
+S6  |The service charge was calculated at 15%. 	                 		|Changed the rate to 0.05 (5%).                					|Calculates the required 5% service charge on the subtotal.
+
+
+CODE COMPLETION / IMPLEMENTATION (briefly state what was completed)
+M1:Added <meta charset="UTF-8"> and the responsive viewport meta tag to support character encoding and mobile-friendly display.
+M2:Added a semantic <aside class="notice"> containing the heading “Important Note” and a reminder to check the input values before calculating.
+M3:Used display: flex and justify-content: space-between to display navigation links horizontally with space between them.
+M4:Used CSS Grid with grid-template-columns: repeat(2, minmax(0, 1fr)) to display the two information cards in equal-width columns.
+M5:Added a media query for screens 600px and below. The cards change to one column, and the navigation links become vertical.
+M6:Implemented calculateDiscount(amount, percentage) using the formula amount * percentage / 100.
+D1:Implemented getRate(type) using if-else statements: Student = 10%, Staff = 5%, and Visitor = 0%.
+D2:Implemented calculateTotal(subtotal, discount, serviceCharge) to return subtotal - discount + serviceCharge.
+D3:Implemented buildBreakdown(unitPrice, quantity) using a for loop to display the running cost after each item.
+
+FUNCTIONAL TEST
+Test input: Price per item: ₹100
+            Quantity: 3
+            Customer type: Student
+Observed result:To be filled after running the program in the browser. Expected output is subtotal ₹300, discount ₹30, service charge ₹15, payable amount ₹285, and running item cost ₹300 after item 3.
+Mobile layout checked (Yes/No):
+
+GIT VERSION CONTROL
+git log -1 --oneline output:
+GitHub URL (if available):

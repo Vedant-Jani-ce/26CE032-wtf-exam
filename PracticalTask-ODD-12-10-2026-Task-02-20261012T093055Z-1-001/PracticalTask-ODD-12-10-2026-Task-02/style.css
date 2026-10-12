@@ -1,0 +1,155 @@
+/* ITUS102 | Practical Assessment | 12-10-2026 | Task 02 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #243746;
+    background-color: #EAF4F4;
+}
+
+.site-header {
+    padding: 22px 6%;
+    background: #173B57;
+    color: #FFFFFF;
+}
+
+#pageTitle {
+    margin: 0 0 14px;
+    letter-spacing: 0.4px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 6px;
+}
+
+.nav-links a:hover {
+    color: #A7F3D0;
+    text-decoration: underline;
+}
+
+main {
+    width: min(960px, 92%);
+    margin: 24px auto;
+}
+
+h2 {
+    margin-top: 0;
+    color: #173B57;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.card {
+    min-width: 0;
+    border: 1px solid #D5E2E8;
+    border-radius: 9px;
+    background: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 3px 10px rgba(23, 59, 87, 0.06);
+}
+
+.card p {
+    line-height: 1.55;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #243746;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #A9BEC9;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #243746;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #0F766E;
+    outline-offset: 1px;
+    border-color: #0F766E;
+}
+
+button {
+    display: block;
+    margin-top: 16px;
+    padding: 11px 16px;
+    color: #FFFFFF;
+    border: 0;
+    background: #0F766E;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background: #115E59;
+}
+
+.result-card {
+    border-left: 4px solid #0F766E;
+    background-color: #F0FDFA;
+}
+
+#result {
+    font-weight: bold;
+    overflow-wrap: anywhere;
+    color: #115E59;
+}
+
+pre {
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    line-height: 1.65;
+}
+
+.notice {
+    padding: 10px 18px;
+    margin: 16px 0;
+    background: #FFF4D6;
+    border-left: 4px solid #D4A72C;
+    color: #624B16;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 14px;
+    background: #DCE9ED;
+    color: #243746;
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

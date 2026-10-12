@@ -1,0 +1,60 @@
+FACULTY OF TECHNOLOGY, CHARUSAT
+ITUS102 - WEB TECHNOLOGY FRAMEWORK
+PRACTICAL EXAMINATION
+Date: 12-10-2026 | Set: Task 02
+Task: Campus Canteen Order Calculator
+Duration: 120 minutes | Maximum Marks: 10
+Scope: Practical 1 (HTML5/Git), Practical 2 (CSS3), Practical 3 (JavaScript Fundamentals)
+
+SCENARIO
+The campus canteen wants to calculate food-item totals for different customers and display a running cost for the items ordered.
+
+GENERAL INSTRUCTIONS
+1. Open index.html in a browser, inspect the files and work only in the given project.
+2. Do not replace the complete project with a newly written application.
+3. Correct the buggy lines and complete the requested code in index.html, style.css and script.js.
+4. GenAI tools may be used to understand syntax and debug, but you must be able to explain your changes.
+5. Every task must be completed and checked in the browser; comments alone do not earn marks.
+6. Write short explanations for S1-S6 in Bug_Report_Template.txt.
+7. Use Git for version control and create at least one meaningful local commit. Push to GitHub if available.
+8. Do not include unrelated frameworks, server code or database code.
+
+A. SIMPLE - DEBUGGING (6 x 0.5 = 3 marks)
+S1. The first navigation link does not scroll to the calculator section. Correct its target.
+S2. The bottom site-information area uses a generic container instead of the correct semantic HTML5 element. Correct it without changing its content.
+S3. The page background color is not being applied. Identify and fix the CSS syntax.
+S4. The heading styling rule does not select the heading. Correct the selector to match the existing HTML ID.
+S5. The bill adds unit price to quantity instead of calculating the actual subtotal. Correct the operator.
+S6. The service charge percentage is incorrect. Use 5% of subtotal.
+
+B. MEDIUM - CODE COMPLETION (6 x 0.5 = 3 marks)
+M1. Add charset=UTF-8 and the standard responsive viewport metadata to index.html.
+M2. Complete TODO M2 by adding an HTML5 <aside> containing an <h2>Important Note</h2> and one sentence reminding users to check values.
+M3. Complete TODO M3: display navigation links horizontally using Flexbox and justify-content:space-between.
+M4. Complete TODO M4: display the two information cards using CSS Grid with two equal columns.
+M5. Complete TODO M5: for screens 600px and below, stack the two cards in one column and make the navigation vertical.
+M6. Complete calculateDiscount(amount, percentage) to calculate the discount.
+
+C. DIFFICULT - NEW CODE IMPLEMENTATION (3 x 1 = 3 marks)
+D1. Write getRate(type) using if–else: Student = 10, Staff = 5, Visitor = 0.
+D2. Implement calculateTotal(subtotal, discount, serviceCharge) and return subtotal − discount + serviceCharge.
+D3. Use a for loop in buildBreakdown(unitPrice, quantity) to display the running cost after item 1, 2, ..., quantity.
+
+D. VERIFICATION AND VERSION CONTROL (1 mark)
+V1. Demonstrate the output of the completed program using the given test case (0.5 mark)
+    and show at least one meaningful local Git commit (0.5 mark). Add the Git commit
+    reference (git log -1 --oneline) and, if available, the GitHub repository URL
+    to Bug_Report_Template.txt.
+
+REQUIRED TEST CASE
+Input: Price ₹100; quantity 3; Student
+Expected: Subtotal ₹300; discount ₹30; service charge ₹15; payable ₹285; running item cost at item 3 = ₹300.
+Test the webpage at desktop and narrow/mobile browser widths.
+
+FILES TO SUBMIT
+1. index.html, style.css and script.js (with all changes saved)
+2. Completed Bug_Report_Template.txt
+3. Git commit reference; GitHub URL if pushed
+
+Submission folder: EnrollmentNo_Name_PracticalTask-ODD-12-10-2026-Task-02
+Ensure the page opens and the files remain linked after submission.

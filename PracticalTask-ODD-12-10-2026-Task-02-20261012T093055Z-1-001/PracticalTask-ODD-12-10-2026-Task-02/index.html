@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Canteen Order Calculator - Practical Assessment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header" id="top">
+        <h1 id="pageTitle">Campus Canteen</h1>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#calculator">Order calculator</a>
+            <a href="#results">Results</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="calculator">
+            <h2>Campus Canteen Order Calculator</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>Enter information</h3>
+
+                    <label for="unitPrice">Price per item (₹)</label>
+                    <input
+                        id="unitPrice"
+                        type="number"
+                        value="100"
+                        min="1"
+                        step="1"
+                    >
+
+                    <label for="quantity">Quantity (1–10)</label>
+                    <input
+                        id="quantity"
+                        type="number"
+                        value="3"
+                        min="1"
+                        max="10"
+                        step="1"
+                    >
+
+                    <label for="customerType">Customer type</label>
+                    <select id="customerType">
+                        <option value="Student">Student</option>
+                        <option value="Staff">Staff</option>
+                        <option value="Visitor">Visitor</option>
+                    </select>
+
+                    <button type="button" onclick="calculateOrder()">
+                        Calculate
+                    </button>
+                </article>
+
+                <article class="card">
+                    <h3>Calculation policy</h3>
+                    <p>
+                        Discount: Student 10%, Staff 5%, Visitor 0%.
+                        Service charge: 5% of the subtotal.
+                        Quantity is from 1 to 10.
+                    </p>
+                    <p>
+                        Use the Calculate button to check the result
+                        and the detailed summary.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <aside class="notice">
+            <h2>Important Note</h2>
+            <p>Please check that the price, quantity, and customer type are correct before calculating your order.</p>
+        </aside>
+
+        <section id="results" class="card result-card">
+            <h2>Calculated result</h2>
+            <p id="result" aria-live="polite">
+                Enter values and select Calculate.
+            </p>
+
+            <h3>Detailed summary</h3>
+            <pre id="breakdown">The breakdown will appear here.</pre>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Campus Canteen — ITUS102 | Web Technology Framework</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
